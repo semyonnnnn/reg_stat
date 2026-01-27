@@ -1,1 +1,1 @@
-export const CMS_BLOCK_ID = "c447f2f0-11ee-4833-9f95-cd7c08ba671e";
+export const CMS_BLOCK_ID = '0d7427e8-f667-45b1-8ade-a2c60e950022';

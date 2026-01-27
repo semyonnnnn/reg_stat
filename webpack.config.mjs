@@ -18,7 +18,7 @@ const isDev = process.env.NODE_ENV === "development";
 
 export default {
   mode: isDev ? "development" : "production",
-  entry: "./app/app.js",
+  entry: "./app/index.js",
   output: {
     path: outputDir,
     filename: bundleFilename,
