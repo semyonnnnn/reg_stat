@@ -5,31 +5,26 @@ export class Builder {
     }
 
     #not_attributes = ['className', 'children', 'html', 'textContent'];
-    #handlers = {
-        html: (parent, value) => {
-            const element = document.createElement(value);
-            parent.appendChild(element);
-        },
-        className: (el, value) => el.className = value,
-    };
+
+    #if_exists_prop(obj, element, prop) {
+        if (obj[prop]) element[prop] = obj[prop];
+    }
 
     build(parent, obj) {
+        const currentElement = document.createElement(obj['html']);
+        this.#if_exists_prop(obj, currentElement, 'className');
+        this.#if_exists_prop(obj, currentElement, 'textContent');
         for (const key in obj) {
             if (!this.#not_attributes.includes(key)) {
-                this.element.setAttribute(key, obj[key]);
-                continue; //skips the rest of the loop
-            }
-
-            switch (this.#not_attributes) {
-                case 'html': {
-                    this.#handlers.html(parent, obj[key]);
-                    break;
-                }
-                case 'className': {
-                    this.#handlers.className();
-                }
+                currentElement.setAttribute(key, obj[key]);
             }
         }
-        parent.appendChild(this.element);
+        parent.appendChild(currentElement);
+        if (obj.hasOwnProperty('children')) {
+            for (const key in obj['children']) {
+                const child = obj['children'][key];
+                this.build(currentElement, child);
+            }
+        }
     }
 }
