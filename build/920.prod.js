@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknav=self.webpackChunknav||[]).push([[920],{920(n){n.exports="body {\r\n  background-color: rgb(190, 240, 255);\r\n}\r\n"}}]);

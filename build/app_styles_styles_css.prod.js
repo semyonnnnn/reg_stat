@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknav=self.webpackChunknav||[]).push([["app_styles_styles_css"],{"./app/styles/styles.css"(module){eval('{module.exports = "body {\\r\\n  background-color: rgb(190, 240, 255);\\r\\n}\\r\\n";\n\n//# sourceURL=webpack://nav/./app/styles/styles.css?\n}')}}]);

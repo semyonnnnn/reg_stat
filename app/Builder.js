@@ -11,6 +11,8 @@ export class Builder {
     }
 
     build(parent, obj) {
+        if (!obj) return;
+
         const currentElement = document.createElement(obj['html']);
         this.#if_exists_prop(obj, currentElement, 'className');
         this.#if_exists_prop(obj, currentElement, 'textContent');
@@ -20,11 +22,15 @@ export class Builder {
             }
         }
         parent.appendChild(currentElement);
-        if (obj.hasOwnProperty('children')) {
-            for (const key in obj['children']) {
-                const child = obj['children'][key];
-                this.build(currentElement, child);
-            }
+
+        if (!obj.children) return;
+
+        const children = obj['children'];
+
+        for (const key in children) {
+            const child = children[key];
+            this.build(currentElement, child);
         }
+
     }
 }

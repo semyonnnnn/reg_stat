@@ -6,6 +6,9 @@ import WebpackShellPluginNext from "webpack-shell-plugin-next";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import webpack from "webpack";
+import TerserPlugin from "terser-webpack-plugin";
+
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -72,4 +75,19 @@ export default {
       },
     }),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          format: {
+            comments: false, // ❌ remove all comments
+            ascii_only: false, // keep UTF-8 characters
+          },
+        },
+        extractComments: false, // ❌ prevent generating LICENSE.txt
+      }),
+    ],
+  },
+
 };

@@ -1,5 +1,7 @@
-import { App } from "./App.js";
+import { App } from "./app.js";
 import { CMS_BLOCK_ID } from "./utils/key.js";
+
+
 
 document.addEventListener("DOMContentLoaded", async () => {
   const cms_block = document.getElementById(CMS_BLOCK_ID)?.parentElement;
