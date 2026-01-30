@@ -1,9 +1,9 @@
 import { docCreate } from "./docCreate.js";
 
-export const MunDB = {
+const MunDBEkb = {
     html: "div",
     id: 'mun_db',
-    className: "document-list__items",
+    className: "document-list__items ekb main-content",
     children: {
         title: { html: "h2", className: "section_title" },
         attention: { html: "div", className: "attention_block" },
@@ -40,4 +40,77 @@ export const MunDB = {
             },
         },
     },
+};
+
+const MunDBKurgan = {
+    html: "div",
+    id: "mun_db_kurgan",
+    className: "document-list__items main-content krg hide",
+    children: {
+        content: {
+            html: "div",
+            className: "content",
+            children: {
+                p1: {
+                    html: "p",
+                    className: "soder",
+                    style: "text-align: center;",
+                    children: {
+                        span: {
+                            html: "span",
+                            style: "color: #ff0000;",
+                            children: {
+                                bold: { html: "b" },
+                            },
+                        },
+                    },
+                },
+                p2: {
+                    html: "p",
+                    className: "soder",
+                    style: "text-align: center;",
+                    children: {
+                        span: {
+                            html: "span",
+                            style: "color: #ff0000;",
+                            textContent: "\u00A0",
+                        },
+                    },
+                },
+            },
+        },
+
+        ...docCreate("row1krg", {
+            title: "Инструкция по работе с БД ПМО",
+            info: "04.10.2023",
+            href: "https://66.rosstat.gov.ru/storage/mediabank/Инструкция по работе с БД ПМО - КО.doc",
+            type: "WEB",
+            icon: "call_made",
+        }),
+
+        ...docCreate("row2krg", {
+            title: "Краткий методологический комментарий по показателям БД ПМО",
+            info: "03.10.2023",
+            href: "https://rosstat.gov.ru/storage/mediabank/met_bdpmo.htm",
+            type: "WEB",
+            icon: "call_made",
+        }),
+
+        ...docCreate("row3krg", {
+            title: "База данных показателей муниципальных образований Курганской области (БД ПМО)",
+            info: "14.12.2018",
+            href: "https://rosstat.gov.ru/dbscripts/munst/munst37/DBInet.cgi",
+            type: "WEB",
+            icon: "call_made",
+        }),
+    },
+};
+
+export const MunDB = {
+    html: 'div',
+    className: 'content',
+    children: {
+        MunDBEkb,
+        MunDBKurgan
+    }
 };

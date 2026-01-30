@@ -1,3 +1,79 @@
-body {
-  background-color: rgb(190, 240, 255);
+.mun_menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu > * {
+  display: none;
+  user-select: none;
+}
+.menu {
+  height: fit-content;
+  user-select: none;
+  display: block;
+  border-bottom: 2px solid black;
+  font-size: 1.2rem;
+  font-weight: 900;
+  max-width: 35rem;
+}
+/* .regulatory_docs_menu:hover * {
+  display: block;
+}
+
+.main_indicators:hover * {
+  display: block;
+}
+.mun_unit:hover * {
+  display: block;
+} */
+.sub {
+  top: 3rem;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid black;
+}
+.item {
+  padding: 1rem 3rem;
+  margin: 0;
+}
+.item:hover {
+  background-color: #1657b8;
+  color: white;
+}
+.show {
+  display: block;
+}
+.veil {
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+.hide {
+  display: none;
+}
+.menu,
+.sub {
+  cursor: pointer;
+  z-index: 2;
+}
+.grandWrapper {
+  margin-top: 3rem;
+}
+.main-content {
+  padding: 3rem 0;
+  margin: 2rem 0;
+}
+.where_am_i {
+  margin: 2rem 0;
+  text-decoration: underline;
+}
+.region-buttons {
+  display: flex;
+  gap: 2rem;
+}
+.button {
+  cursor: pointer;
+  margin: 3rem 0;
 }

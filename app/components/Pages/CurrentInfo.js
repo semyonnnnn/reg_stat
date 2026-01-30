@@ -1,8 +1,8 @@
-import { docCreate } from "../docCreate.js";
+import { docCreate } from "./docCreate.js";
 
-export const currentInfo = {
+const CurrentInfoEkb = {
     html: "div",
-    className: "document-list__items",
+    className: "document-list__items current_info ekb main-content",
     children: {
         ...docCreate("row2025", {
             title: "Оценка численности населения по муниципальным образованиям Свердловской области на 1 января 2025 года и в среднем за 2024 год",
@@ -47,4 +47,37 @@ export const currentInfo = {
             type: "DOCX",
         }),
     },
+};
+
+
+const CurrentInfoKurgan = {
+    html: "div",
+    className: "document-list__items current_info krg main-content hide",
+    children: {
+        ...docCreate("row2025krg", {
+            title:
+                "Оценка численности населения по муниципальным образованиям Курганской области на 1 января 2025 года и в среднем за 2024 год",
+            info: "13.65 Кб, 25.04.2025",
+            href:
+                "/storage/mediabank/Числ_ МО_ 2025_Курганская обл(1).xlsx",
+            type: "XLSX",
+        }),
+        ...docCreate("row2022krg", {
+            title:
+                "Объем социальных выплат населению и налогооблагаемых денежных доходов населения по муниципальным, городским округам и муниципальным районам за 2022 год",
+            info: "37.64 Кб, 10.04.2024",
+            href:
+                "/storage/mediabank/Курганская область_соцвыплаты_2022.xlsx",
+            type: "XLSX",
+        }),
+    },
+};
+
+export const CurrentInfo = {
+    html: 'div',
+    className: 'content',
+    children: {
+        CurrentInfoEkb,
+        CurrentInfoKurgan
+    }
 };
