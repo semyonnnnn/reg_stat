@@ -1,0 +1,9 @@
+@media (max-width: 600px) {
+  .mun_menu {
+    gap: 0.7rem;
+  }
+  .sub {
+    position: relative !important;
+    margin-bottom: 2rem !important;
+  }
+}

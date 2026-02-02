@@ -72,7 +72,7 @@ export default {
   entry: {
     main: "./app/index.js", // big mammoth JS
     styles: [
-      // "./app/styles/multiple_style_files_example.css",  // small mammoth
+      "./app/styles/mobile.css",  // small mammoth
       "./app/styles/styles.css", // medium mammoth
     ],
   },

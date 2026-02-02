@@ -16,24 +16,24 @@ export const Menu = {
             textContent: 'Основные показатели социально-экономического положения',
             children: {
                 main_indicators_sub: {
-                    html: 'p',
+                    html: 'div',
                     id: 'main_indicators_sub',
                     className: 'main_indicators_sub sub',
                     children: {
                         currentInfo: {
-                            html: 'p',
+                            html: 'div',
                             id: 'currentInfo',
                             className: 'currentInfo item',
                             textContent: 'Оперативная информация'
                         },
                         indicators: {
-                            html: 'p',
+                            html: 'div',
                             id: 'indicators',
                             className: 'indicators item',
                             textContent: 'Показатели для оценки эффективности деятельности органов местного самоуправления'
                         },
                         munDB: {
-                            html: 'p',
+                            html: 'div',
                             id: 'munDB',
                             className: 'munDB item',
                             textContent: 'База данных показателей муниципальных образований'
@@ -49,24 +49,24 @@ export const Menu = {
             textContent: 'Нормативные документы',
             children: {
                 regulatory_docs_sub: {
-                    html: 'p',
+                    html: 'div',
                     id: 'regulatory_docs_sub',
                     className: 'regulatory_docs_sub sub',
                     children: {
                         federal_laws: {
-                            html: 'p',
+                            html: 'div',
                             id: 'federal_laws',
                             className: 'federal_laws item',
                             textContent: 'Федеральные законы'
                         },
                         presidential_decrees: {
-                            html: 'p',
+                            html: 'div',
                             id: 'presidential_decrees',
                             className: 'presidential_decree item',
                             textContent: 'Указы Президента'
                         },
                         government_resolutions: {
-                            html: 'p',
+                            html: 'div',
                             id: 'government_resolutions',
                             className: 'government_resolutions item',
                             textContent: 'Постановления Правительства'
