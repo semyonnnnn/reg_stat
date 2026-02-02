@@ -42,7 +42,7 @@ export class MainContentManager {
 
         const where_am_i = document.querySelector('.where_am_i');
         if (where_am_i) {
-            where_am_i.textContent = 'Муниципальные образования';
+            where_am_i.textContent = 'Перечень муниципальных образований';
         }
     }
 
@@ -61,10 +61,16 @@ export class MainContentManager {
                 this.parent.innerHTML = '';
 
                 new Builder(this.parent, WhereAmI);
-                new Builder(this.parent, RegionButtons);
+                if (dom_item.parentElement.parentElement && dom_item.parentElement.parentElement.id !== 'regulatory_docs') new Builder(this.parent, RegionButtons);
+
 
                 const where_am_i = document.querySelector('.where_am_i');
-                where_am_i.textContent = parent_text + ' ➞ ' + dom_item_text;
+                if (dom_item.parentElement.id !== 'mun_menu') {
+                    where_am_i.textContent = parent_text + ' ➞ ' + dom_item_text
+                }
+                else {
+                    where_am_i.textContent = dom_item_text;
+                };
 
                 new Builder(this.parent, this.entities[item]);
                 this.add_switcher();
