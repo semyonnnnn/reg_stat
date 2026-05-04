@@ -33,9 +33,11 @@
   background-color: #fff;
   border: 1px solid black;
 }
+/* .indicators */
 .item {
   padding: 1rem 3rem;
   margin: 0;
+  font-size: 1.1rem !important;
 }
 .item:hover {
   background-color: #1657b8;
@@ -77,4 +79,6 @@
 .button {
   cursor: pointer;
   margin: 3rem 0 !important;
+  font-size: 1.4rem !important;
+  padding: 1rem 2rem !important;
 }
